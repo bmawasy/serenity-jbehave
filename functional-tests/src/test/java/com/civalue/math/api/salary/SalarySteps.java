@@ -5,6 +5,7 @@ import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Assert;
 
 /**
  * Created by Bader Mawasy on 01/06/2023.
@@ -35,7 +36,7 @@ public class SalarySteps {
         if (!isVisited) {
             throw new RuntimeException(" unexpected value of isVisited=" + false);
         }
-        if (value != (12 * monthlySalary))
-            throw new RuntimeException("result is " + calcService.getValue() + ", but should be " + value);
+        Assert.assertEquals("Yearly salary is as expected", value.longValue(), (12 * monthlySalary));
+
     }
 }

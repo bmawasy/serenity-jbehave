@@ -54,6 +54,6 @@ public class CalculatorSteps {
         if (!isVisited) {
             throw new RuntimeException(" unexpected value of isVisited=" + false);
         }
-        Assert.assertNotEquals("value is not the expected",value, calcService.getValue());
+        Assert.assertEquals("value is not the expected",value, calcService.getValue());
     }
 }
