@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="math" />
+        <module name="functional-tests" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="math (1)" target="1.8" />
+      <module name="math (1) (com.civalue.math)" target="1.8" />
+      <module name="math (2)" target="1.8" />
+      <module name="math (2) (com.civalue)" target="1.8" />
+      <module name="mtitek-serenity-samples" target="1.8" />
+      <module name="samplebdd" target="1.8" />
+      <module name="selinume" target="1.8" />
+      <module name="spring-boot-jbehave" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="functional-tests" options="" />
+      <module name="math" options="-parameters" />
+      <module name="math (2)" options="-parameters" />
+      <module name="math (2) (com.civalue)" options="-parameters" />
+      <module name="serenity-bdd-jbehave" options="" />
+      <module name="spring-boot-jbehave" options="-parameters" />
+    </option>
+  </component>
+</project>
