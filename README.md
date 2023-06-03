@@ -1,4 +1,4 @@
-# spring-boot-jbehave
+# serenity-jbehave
 
 ## combining Jbehave with serenity to present reports
 This project is to show BDDs implementing JBehave to write the stories, 
