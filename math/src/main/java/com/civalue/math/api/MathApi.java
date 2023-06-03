@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path = MathApi.PATH)
 public interface MathApi {
-    static final String PATH = "/math/api";
+    String PATH = "/math/api";
     @GetMapping("/x")
     long get();
 

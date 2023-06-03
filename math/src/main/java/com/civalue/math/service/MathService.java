@@ -4,7 +4,6 @@ import com.civalue.math.api.MathApi;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.function.LongUnaryOperator;
 
 /**
  * Created by Bader Mawasy
@@ -12,7 +11,7 @@ import java.util.function.LongUnaryOperator;
 @Service
 public class MathService implements MathApi {
 
-    private AtomicLong result = new AtomicLong(0);
+    private final AtomicLong result = new AtomicLong(0);
 
     @Override
     public long get() {

@@ -14,7 +14,7 @@ import org.jbehave.core.annotations.When;
 public class SalarySteps {
     private boolean isVisited = false;
     private long monthlySalary = 0;
-    private CalculatorStepsScenario calcService = new CalculatorStepsScenario();
+    private final CalculatorStepsScenario calcService = new CalculatorStepsScenario();
 
     @Given("the employee monthly salary is $value dollar")
     public void givenSalaryValue(@Named("value") Long value) {

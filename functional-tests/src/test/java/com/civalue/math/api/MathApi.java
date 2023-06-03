@@ -5,7 +5,7 @@ import feign.Param;
 import feign.RequestLine;
 
 interface MathApi {
-    static final String PATH = "/math/api";
+    String PATH = "/math/api";
 
     @RequestLine("POST " + PATH + "/multiply/{x}")
     Long multiply(@Param("x") Long x);

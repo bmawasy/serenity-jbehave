@@ -5,6 +5,7 @@ import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Assert;
 
 /**
  * Created by Bader Mawasy on 01/06/2023.
@@ -13,7 +14,7 @@ import org.jbehave.core.annotations.When;
 //@Scope
 public class CalculatorSteps {
     private boolean isVisited = false;
-    private CalculatorStepsScenario calcService = new CalculatorStepsScenario();
+    private final CalculatorStepsScenario calcService = new CalculatorStepsScenario();
 
     @Given("the server has a variable x with value $value")
     public void givenXValue(@Named("value") Long value) {
@@ -53,7 +54,6 @@ public class CalculatorSteps {
         if (!isVisited) {
             throw new RuntimeException(" unexpected value of isVisited=" + false);
         }
-        if (value != calcService.getValue())
-            throw new RuntimeException("result is " + calcService.getValue() + ", but should be " + value);
+        Assert.assertNotEquals("value is not the expected",value, calcService.getValue());
     }
 }

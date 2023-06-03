@@ -17,10 +17,9 @@ import feign.gson.GsonEncoder;
 public class CalculatorStepsScenario {
 
 
-    private MathApi mathApiTest = Feign.builder()
+    private final MathApi mathApiTest = Feign.builder()
             .decoder(new GsonDecoder()).encoder(new GsonEncoder())
             .target(MathApi.class, "http://localhost:9090/");
-    private Long x;
 
     public Long multiply(Long x) {
         return mathApiTest.multiply(x);

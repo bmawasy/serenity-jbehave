@@ -14,7 +14,7 @@ import org.junit.Assert;
 //@Scope
 public class BankSteps {
     private boolean isVisited = false;
-    private CalculatorStepsScenario calcService = new CalculatorStepsScenario();
+    private final CalculatorStepsScenario calcService = new CalculatorStepsScenario();
 
     @Given("account has $value dollar in his bank account")
     public void givenXValue(@Named("value") Long value) {
