@@ -10,6 +10,7 @@ Given account has 0 dollar in his bank account
 
 
 Scenario: reset Before balance, add put money in bank account
+@uniqId: id1
 Given account has 2000 dollar in his bank account
 When he added 19000 to the account
 Then his accounts balance should equal to 21000

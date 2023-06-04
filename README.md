@@ -5,7 +5,7 @@ This project is to show BDDs implementing JBehave to write the stories,
 and Serenity to present the results
 
 ## server side:
-In order to run the integration test you need to run the math server, 
+In order to run the integration test you need math server up, 
 which found under math module, it is a spring application to Start a web application.
 The server exposes multiple Math operations API, and have a local persistence.
 The APIs can do basic math operations (set, multiply, divide, add and subtract) 
